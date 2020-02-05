@@ -13,4 +13,4 @@ WORKDIR /var/run/smokeping
 
 EXPOSE 80
 
-CMD smokeping --nodeamon
+CMD smokeping --nodaemon

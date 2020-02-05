@@ -5,7 +5,6 @@ ENV DEBIAN_FRONTEND="noninteractive" HOME="/root" TERM="xterm" APACHE_LOG_DIR="/
 RUN apt update && \
     apt upgrade -y && \
     apt install -y smokeping rrdtool librrds-perl libssl-dev perl apache2 && \
-    ln -s /etc/smokeping/apache2.conf /etc/apache2/apache2.conf && \
     a2enconf apache2 && \
     a2enmod cgid && \
     apt-get autoremove -y && \

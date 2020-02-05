@@ -3,7 +3,7 @@ FROM arm32v7/ubuntu:18.04
 COPY qemu-arm-static /usr/bin
 
 RUN apt update && \
-    apt upgrade && \
+    apt upgrade -y && \
     apt install -y smokeping && \
     rm -rf /var/lib/apt/lists/*
 

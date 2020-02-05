@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt update && \
-    apt upgrade && \
+    apt upgrade -y && \
     apt install -y smokeping && \
     rm -rf /var/lib/apt/lists/*
 

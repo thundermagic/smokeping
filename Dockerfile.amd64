@@ -1,0 +1,13 @@
+FROM ubuntu:18.04
+
+RUN apt update && \
+    apt upgrade && \
+    apt install -y smokeping && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /var/run/smokeping
+
+EXPOSE 80
+
+CMD smokeping --debug
+

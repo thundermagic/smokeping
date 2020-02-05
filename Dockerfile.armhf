@@ -1,0 +1,14 @@
+FROM arm32v7/ubuntu:18.04
+
+COPY qemu-arm-static /usr/bin
+
+RUN apt update && \
+    apt upgrade && \
+    apt install -y smokeping && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /var/run/smokeping
+
+EXPOSE 80
+
+CMD smokeping --debug
